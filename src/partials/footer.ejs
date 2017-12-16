@@ -19,6 +19,18 @@
         console.log('Registration failed with ' + error);
     });
     }
+    function scrollUp(){
+        console.log(window.scrollX)
+        if(window.scrollY == 0){
+            document.getElementsByClassName('nav')[0].classList.add('top')
+            document.querySelector("meta[name=theme-color]").setAttribute("content", "#242424");
+        }else{
+            document.getElementsByClassName('nav')[0].classList.remove('top')
+            document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
+        }
+    }
+    window.onscroll = scrollUp
+    scrollUp()
 </script>
 <link href="/css/index.css" rel="stylesheet" media="none" onload="this.media='all';">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet" media="none" onload="this.media='all';">

@@ -83,10 +83,12 @@ h1{
         .header-image{
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
             clip-path: url("#clip-path");    
-            //background-image: url('/img/top.jpeg');
-            //background-size: cover;
-            //background-position-y: bottom;
-            //background-position-x: center;
+            background-image: url('/img/top.jpeg');
+            background-size: contain;
+            background-color: #ffffff;
+            background-position-y: center;
+            background-position-x: center;
+            background-repeat: no-repeat;
             height: 100%;
             width: 100%;
         }
