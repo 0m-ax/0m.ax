@@ -72,8 +72,8 @@ gulp.task('sass:prod', function () {
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./dist/css'))
 });
-gulp.task('css',gulpSequence('sass','critical:gen','html'))
-gulp.task('css:prod',gulpSequence('sass:prod','html','critical:gen','html'))
+gulp.task('css',(cb)=>gulpSequence('sass','critical:gen','html',cb))
+gulp.task('css:prod',(cb)=>gulpSequence('sass:prod','html','critical:gen','html',cb))
 gulp.task('css:watch', function () {
   gulp.watch('./src/css/**/*.scss', ['css']);
 });
