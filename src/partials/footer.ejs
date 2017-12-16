@@ -1,4 +1,5 @@
 <script>
+    //registar nav
     document.getElementById('mobile-nav-toggle').onclick = function(e){
         e.preventDefault()
         document.getElementById('mobile-nav-menu').classList.toggle("active");
@@ -9,15 +10,23 @@
         document.getElementById('mobile-nav-menu').classList.toggle("active");
         document.getElementById('mobile-nav-cover').classList.toggle("active");
     }
+    //registar fab logic
+    if(document.getElementById('fab')){
+        document.getElementById('fab').onclick = function(e){
+            e.preventDefault()
+            Array.from(document.getElementsByClassName('mini')).map((element)=>element.classList.toggle("active"));
+        }
+    }
+    //registar service worker
     if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
-    .then(function(reg) {
-        // registration worked
-        console.log('Registration succeeded. Scope is ' + reg.scope);
-    }).catch(function(error) {
-        // registration failed
-        console.log('Registration failed with ' + error);
-    });
+        navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+        .then(function(reg) {
+            // registration worked
+            console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch(function(error) {
+            // registration failed
+            console.log('Registration failed with ' + error);
+        });
     }
     function scrollUp(){
         console.log(window.scrollX)
@@ -31,6 +40,22 @@
     }
     window.onscroll = scrollUp
     scrollUp()
+    //registar share
+    function share(e){
+        e.preventDefault()
+        console.log(e,this.dataset)
+        navigator.share({
+            title: this.dataset.title,
+            text: this.dataset.text,
+            url: window.location,
+        })
+        .catch((error) => console.log('Error sharing', error));
+    }
+    if (navigator.share) {
+        Array.from(document.getElementsByClassName('share')).map((element)=>{console.log(element);element.onclick=share;});
+    }
+
 </script>
 <link href="/css/index.css" rel="stylesheet" media="none" onload="this.media='all';">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet" media="none" onload="this.media='all';">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" media="none" onload="this.media='all';">
