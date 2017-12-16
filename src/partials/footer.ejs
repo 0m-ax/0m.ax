@@ -1,0 +1,24 @@
+<script>
+    document.getElementById('mobile-nav-toggle').onclick = function(e){
+        e.preventDefault()
+        document.getElementById('mobile-nav-menu').classList.toggle("active");
+        document.getElementById('mobile-nav-cover').classList.toggle("active");
+    }
+    document.getElementById('mobile-nav-cover').onclick = function(e){
+        e.preventDefault()
+        document.getElementById('mobile-nav-menu').classList.toggle("active");
+        document.getElementById('mobile-nav-cover').classList.toggle("active");
+    }
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+    .then(function(reg) {
+        // registration worked
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+    }).catch(function(error) {
+        // registration failed
+        console.log('Registration failed with ' + error);
+    });
+    }
+</script>
+<link href="/css/index.css" rel="stylesheet" media="none" onload="this.media='all';">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet" media="none" onload="this.media='all';">

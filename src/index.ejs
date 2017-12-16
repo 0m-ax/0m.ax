@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %> 
+    <style>
+        body,html{
+            background-color: #242424;
+            background-image: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet" media="none" onload="this.media='all';">
+    
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <div class="hold narrow"> 
+        <div class="image" style="padding: 0px 16px;">
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 115 83"> 
+                <style>
+                    .room{
+                        stroke:     #ffffff;
+                        stroke-width:   0.5;
+                    }
+                </style>
+                  <defs>
+                    <clipPath id="cut-off-bottom">
+                        <rect x="0" y="0" width="0" height="60" id="clip" />
+                    </clipPath>
+                </defs>
+                <g transform="translate(50, 41)">
+                    <g transform="matrix(0.707 0.409 -0.707 0.409 0 -0.816)"> 
+                        <g transform="translate(-50, -41)">
+                            <rect id="bottom" class="room" x="15" y="15" width="100" height="60" stroke-dashoffset="321px" stroke-dasharray="321px" fill="#242424" />
+                            
+                            <line class="room" id="line1" x1="15" y1="15" x2="15" y2="15" stroke-width="1" stroke="black"/>
+                            <line class="room" id="line2" x1="115" y1="15" x2="115" y2="15" stroke-width="1" stroke="black"/>
+                            <line class="room" id="line3" x1="15" y1="75" x2="15" y2="75" stroke-width="1" stroke="black"/>
+                            <line class="room" id="line4" x1="115" y1="75" x2="115" y2="75" stroke-width="1" stroke="black"/>
+                            <rect  id="top" stroke-dashoffset="321px" stroke-dasharray="321px" class="room" x="15" y="15" width="100" height="60" fill="#242424"/>
+                            <animate xlink:href="#bottom" attributeName="stroke-dashoffset" from="321" to="1" dur="1s" begin="1s" fill="freeze" id="bottomAn"/>
+                            <animate xlink:href="#top" attributeName="stroke-dashoffset" from="321" to="1" dur="1s" begin="bottomAn.begin" fill="freeze" id="topAn"/>
+                            <animate xlink:href="#top" attributeName="y" from="15" to="0" dur="1s" begin="bottomAn.begin + 1s" fill="freeze" id="y" />
+                            <animate xlink:href="#top" attributeName="x" from="15"to="0"  dur="1s" begin="y.begin" fill="freeze" id="x"/>
+                            <animate xlink:href="#line1" attributeName="x2" from="15" to="0" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line1" attributeName="y2" from="15" to="0" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line2" attributeName="x2" from="115" to="100" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line2" attributeName="y2" from="15" to="0" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line3" attributeName="x2" from="15" to="0" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line3" attributeName="y2" from="75" to="60" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line4" attributeName="x2" from="115" to="100" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#line4" attributeName="y2" from="75" to="60" dur="1s" begin="y.begin" fill="freeze" />
+                            <animate xlink:href="#clip" attributeName="width" from="0" to="100" dur="1s" begin="y.begin + 1s" fill="freeze" />                            
+                            <text  x="50" y="30" font-family="Roboto" font-size="30" text-anchor="middle" alignment-baseline="middle" fill="white" visibility="hidden">
+                                H
+                                <set attributeName='visibility' begin="y.begin + 1s" dur='0.2s' to='visible'/>
+                            </text>
+                            <text  x="50" y="30" font-family="Roboto" font-size="30" text-anchor="middle" alignment-baseline="middle" fill="white" visibility="hidden">
+                                He
+                                <set attributeName='visibility' begin="y.begin + 1.2s" dur='0.2s' to='visible'/>
+                            </text>
+                            <text  x="50" y="30" font-family="Roboto" font-size="30" text-anchor="middle" alignment-baseline="middle" fill="white" visibility="hidden">
+                                Hel
+                                <set attributeName='visibility' begin="y.begin + 1.4s" dur='0.2s' to='visible'/>
+                            </text>
+                            <text  x="50" y="30" font-family="Roboto" font-size="30" text-anchor="middle" alignment-baseline="middle" fill="white" visibility="hidden">
+                                Hell
+                                <set attributeName='visibility' begin="y.begin + 1.6s" dur='0.2s' to='visible'/>
+                            </text>
+                            <text  x="50" y="30" font-family="Roboto" font-size="30" text-anchor="middle" alignment-baseline="middle" fill="white" visibility="hidden">
+                                Hello
+                                <set attributeName='visibility' begin="y.begin + 1.8s" to='visible'/>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="card nopad">
+            <div class="content">
+                    <a class="fab"><i class="material-icons">add</i></a>
+                    <h1>About Me</h1>
+                    <p>
+                            I am Development and Operations engineer and student living in Manchester, UK. My interests are in creating progressive applications for the web that run on a distributed and scalable platforms. Using technologies such as Kubernetes, Nginx, Vuejs, Nodejs and Rethinkdb
+                    </p>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer') %>    
+</body>
+</html>
