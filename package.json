@@ -1,0 +1,34 @@
+{
+  "name": "maxc.in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0m-ax/maxc.in.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0m-ax/maxc.in/issues"
+  },
+  "homepage": "https://github.com/0m-ax/maxc.in#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "critical": "^1.3.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-ejs": "^3.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-webpack": "^1.5.0",
+    "vinyl-named": "^1.1.0"
+  }
+}
