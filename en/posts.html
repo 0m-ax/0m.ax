@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- <link rel="stylesheet" href="css/index.css"> -->
+<title>Max Campbell</title>
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="MaxC">
+<meta name="apple-mobile-web-app-title" content="MaxC">
+<meta name="theme-color" content="#000000">
+<meta name="msapplication-navbutton-color" content="#000000">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/">
+<link rel="icon" type="image/png" sizes="1024x1024" href="img/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+a,body,div,h1,html,i,li,nav,p,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}nav{display:block}body{line-height:1}ul{list-style:none}body{font-family:Roboto,sans-serif;background-color:#242424}.hold{max-width:1200px;margin:auto;margin-top:64px}.narrow{max-width:700px}.material-icons{display:none}.card{background-color:#fff;margin:0 16px;margin-top:92px;margin-bottom:32px;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}.card.nopad{margin-top:16px}body,html{width:100%}.content{line-height:1.2em;padding:16px 32px;text-align:justify;position:relative}h1{line-height:1.2em;font-size:3em}.fabhold{position:absolute;width:64px;height:64px}.fab{position:absolute;top:0;left:0;line-height:48px;width:48px;height:48px;border-radius:32px;padding:8px;font-size:48px;display:block;color:#fff;text-align:center;background-color:#000;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23)}.fab .material-icons{font-size:48px;width:48px}.mini{position:absolute;top:12px;left:12px;line-height:32px;width:32px;height:32px;border-radius:20px;padding:4px;font-size:32px}.content .fabhold{top:-32px;right:32px}.nav{height:64px;background-color:#000;color:#fff;text-align:center;line-height:64px;position:fixed;width:100%;top:0;z-index:99;box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23)}.nav .nav-hold{max-width:1200px;margin:auto;position:relative}.nav .nav-hold .nav-title{font-size:2.1em;float:left}.nav .nav-hold .mobile-menu{position:absolute;top:0;left:8px;color:#fff}.nav .nav-hold .mobile-menu:visited{color:rgba(255,255,255,.75)}.nav .nav-hold .mobile-menu&gt;.material-icons{font-size:52px;line-height:64px}@media (max-width:1024px){.nav .nav-hold .menu{display:none}}@media (min-width:1024px){.nav .nav-hold .mobile-menu{display:none}.nav .nav-hold .nav-title{padding-left:16px;text-align:left}}.nav .nav-hold .menu{float:right;font-size:1em}.nav .nav-hold .menu ul{padding-right:16px;float:right}.nav .nav-hold .menu ul li{padding:0 16px;display:inline;position:relative}.nav .nav-hold .menu ul li a:link{color:#fff;text-decoration:none}.nav .nav-hold .menu ul li a:visited{color:#fff;text-decoration:none}.nav .nav-hold .language{float:right;font-size:1em;padding:0 16px}.nav .nav-hold .language ul{position:relative;margin:0 -16px;top:-16px;visibility:hidden;opacity:0;background-color:#fff;line-height:1em;box-shadow:0 14px 28px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);border-radius:4px}.nav .nav-hold .language ul li{padding:8px 16px}.nav .nav-hold .mobile-nav-menu{width:300px;height:100%;position:fixed;top:0;left:-300px;background-color:#fff;box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)}.nav .nav-hold .mobile-nav-menu ul{text-align:left}.nav .nav-hold .mobile-nav-menu ul a{padding-left:16px;width:100%;display:block;box-sizing:border-box}.nav .nav-hold .mobile-nav-menu ul a:link{color:#000;text-decoration:none}.nav .nav-hold .mobile-nav-menu ul a:visited{color:#000;text-decoration:none}.nav .nav-hold .mobile-nav-menu ul li::after{height:1px;display:block;width:100%;content:&#34; &#34;;background-color:#000}.nav .nav-hold .mobile-nav-cover{width:100%;height:100%;position:fixed;background-color:rgba(0,0,0,0);display:none}
+</style>        
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-hold">
+        <div class="nav-title">Max Campbell</div>
+        <a class="mobile-menu" id="mobile-nav-toggle" href="#"><i class="material-icons">menu</i></a>
+        <div class="language">
+                <a href="/en"><span class="flag-icon flag-icon-gb"></span></a>
+                <ul class="language-list">
+                        
+                        <li><a href="/en"><span class="flag-icon flag-icon-gb"></span></a></li>
+                        
+                        <li><a href="/pr"><span class="flag-icon flag-icon-pi"></span></a></li>
+                        
+                        <li><a href="/da"><span class="flag-icon flag-icon-dk"></span></a></li>
+                        
+                </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./posts.html">Blog</a></li>
+            </ul>  
+        </div>
+
+        <div class="mobile-nav-cover" id="mobile-nav-cover"></div>
+        <div class="mobile-nav-menu" id="mobile-nav-menu">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./posts.html">Blog</a></li>
+            </ul>
+        </div> 
+    </div>
+</nav>
+    <div class="hold"> 
+        <div class="card">
+            <div class="content">
+                <h1>No posts</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+    //registar nav
+    document.getElementById('mobile-nav-toggle').onclick = function(e){
+        e.preventDefault()
+        document.getElementById('mobile-nav-menu').classList.toggle("active");
+        document.getElementById('mobile-nav-cover').classList.toggle("active");
+    }
+    document.getElementById('mobile-nav-cover').onclick = function(e){
+        e.preventDefault()
+        document.getElementById('mobile-nav-menu').classList.toggle("active");
+        document.getElementById('mobile-nav-cover').classList.toggle("active");
+    }
+    //registar fab logic
+    if(document.getElementById('fab')){
+        document.getElementById('fab').onclick = function(e){
+            e.preventDefault()
+            Array.from(document.getElementsByClassName('mini')).map((element)=>element.classList.toggle("active"));
+        }
+    }
+    //registar service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+        .then(function(reg) {
+            // registration worked
+            console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch(function(error) {
+            // registration failed
+            console.log('Registration failed with ' + error);
+        });
+    }
+    function scrollUp(){
+        console.log(window.scrollX)
+        if(window.scrollY == 0){
+            document.getElementsByClassName('nav')[0].classList.add('top')
+            document.querySelector("meta[name=theme-color]").setAttribute("content", "#242424");
+        }else{
+            document.getElementsByClassName('nav')[0].classList.remove('top')
+            document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
+        }
+    }
+    window.onscroll = scrollUp
+    scrollUp()
+    //registar share
+    function share(e){
+        e.preventDefault()
+        console.log(e,this.dataset)
+        navigator.share({
+            title: this.dataset.title,
+            text: this.dataset.text,
+            url: window.location,
+        })
+        .catch((error) => console.log('Error sharing', error));
+    }
+    if (navigator.share) {
+        Array.from(document.getElementsByClassName('share')).map((element)=>{console.log(element);element.onclick=share;});
+    }
+
+</script>
+    
+<link href="/css/index.css" rel="stylesheet" media="none" onload="this.media='all';">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet" media="none" onload="this.media='all';">
+<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" media="none" onload="this.media='all';">
+<link rel="stylesheet" href="/css/flag-icon.css" />    
+</body>
+</html>

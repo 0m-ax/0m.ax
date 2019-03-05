@@ -187,10 +187,7 @@ h1 {
     position: relative; }
     .nav .nav-hold .nav-title {
       font-size: 2.1em;
-      width: 100%;
-      position: absolute;
-      top: 0px;
-      left: 0px; }
+      float: left; }
     .nav .nav-hold .mobile-menu {
       transition: color 0.5s ease;
       position: absolute;
@@ -214,17 +211,15 @@ h1 {
         padding-left: 16px;
         text-align: left; } }
     .nav .nav-hold .menu {
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      top: 0px;
+      float: right;
       font-size: 1em; }
       .nav .nav-hold .menu ul {
         padding-right: 16px;
         float: right; }
         .nav .nav-hold .menu ul li {
           padding: 0px 16px;
-          display: inline; }
+          display: inline;
+          position: relative; }
           .nav .nav-hold .menu ul li a:link {
             color: #ffffff;
             text-decoration: none; }
@@ -236,6 +231,26 @@ h1 {
             text-decoration: none; }
           .nav .nav-hold .menu ul li a:hover {
             color: #cccccc; }
+    .nav .nav-hold .language {
+      float: right;
+      font-size: 1em;
+      padding: 0px 16px; }
+      .nav .nav-hold .language ul {
+        position: relative;
+        margin: 0px -16px;
+        top: -16px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.25s;
+        background-color: #ffffff;
+        line-height: 1em;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 4px; }
+        .nav .nav-hold .language ul li {
+          padding: 8px 16px; }
+    .nav .nav-hold .language:hover .language-list {
+      visibility: visible !important;
+      opacity: 1; }
     .nav .nav-hold .mobile-menu > .mobile-nav-menu {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       top: 0px;
