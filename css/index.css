@@ -190,9 +190,7 @@ h1 {
       float: left; }
     .nav .nav-hold .mobile-menu {
       transition: color 0.5s ease;
-      position: absolute;
-      top: 0px;
-      left: 8px;
+      float: left;
       color: white; }
     .nav .nav-hold .mobile-menu:hover {
       color: rgba(255, 255, 255, 0.75); }
